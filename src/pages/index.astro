@@ -1,0 +1,196 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Home - Diamonds and Bases";
+const pageDescription = "Dive into the world of baseball with Diamonds and Bases. Discover captivating stories, in-depth analysis, and the passion that fuels America's pastime.";
+
+const features = [
+  {
+    title: "Unforgettable Stories",
+    description: "Relive legendary trades, underdog triumphs, and personal journeys that shaped the game.",
+    icon: "fa-history"
+  },
+  {
+    title: "Expert Analysis",
+    description: "Break down stats, tactics, and trends with insights from seasoned analysts.",
+    icon: "fa-chart-line"
+  },
+  {
+    title: "Community Vibes",
+    description: "Join discussions, share your thoughts, and connect with fellow baseball lovers.",
+    icon: "fa-users"
+  }
+];
+
+const recentPosts = [
+  {
+    title: "The Rise of Data-Driven Baseball",
+    excerpt: "How analytics are changing the way we watch and understand the game.",
+    date: "May 15, 2023"
+  },
+  {
+    title: "Legendary Moments That Changed Baseball Forever",
+    excerpt: "A look at the plays that defined generations of the sport.",
+    date: "April 28, 2023"
+  },
+  {
+    title: "The Making of a Modern Pitcher",
+    excerpt: "Inside the training regimen of today's elite pitching staffs.",
+    date: "April 12, 2023"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-accent text-white overflow-hidden">
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Welcome to <span class="block">Diamonds and Bases</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-90">
+          Exploring the Heart of Baseball Through Stories and Analysis
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+            Explore Stories
+          </button>
+          <button class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-primary transition duration-300">
+            View Analysis
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Baseball Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Baseball?</h2>
+        <div class="w-24 h-1 bg-primary mx-auto"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8">
+        <p class="text-lg text-gray-700 mb-6">
+          Baseball isn't just a sport—it's a symphony of strategy, and storytelling. From the crack of the bat to the roar of the crowd, every play weaves a narrative that connects generations.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+          <div class="bg-primary text-white px-6 py-3 rounded-full font-medium">
+            <i class="fas fa-baseball-ball mr-2"></i> Strategy
+          </div>
+          <div class="bg-accent text-white px-6 py-3 rounded-full font-medium">
+            <i class="fas fa-comments mr-2"></i> Storytelling
+          </div>
+          <div class="bg-primary text-white px-6 py-3 rounded-full font-medium">
+            <i class="fas fa-users mr-2"></i> Community
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What We Offer</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Dive into our carefully curated content designed for fans of all levels
+        </p>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <div key={index} class="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
+            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white mb-6">
+              <i class={`text-2xl ${feature.icon}`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">{feature.title}</h3>
+            <p class="text-gray-600">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Posts Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Latest Stories</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Discover the most recent articles and insights from our team
+        </p>
+        <div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {recentPosts.map((post, index) => (
+          <div key={index} class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="h-48 bg-gradient-to-r from-primary to-accent relative">
+              <div class="absolute top-4 right-4 bg-white text-primary px-3 py-1 rounded-full text-sm font-bold">
+                {post.date}
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">{post.title}</h3>
+              <p class="text-gray-600 mb-4">{post.excerpt}</p>
+              <button class="text-primary font-medium flex items-center">
+                Read More
+                <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-primary to-accent text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Baseball Community</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">
+        Be part of the conversation that shapes how we experience America's pastime
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+          Subscribe to Newsletter
+        </button>
+        <button class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-primary transition duration-300">
+          Join Discussion Group
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .hero-pattern {
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(220, 38, 38, 0.1) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, rgba(5, 67, 47, 0.1) 0%, transparent 20%);
+  }
+  
+  .feature-card:hover {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #dc2626, #05432f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

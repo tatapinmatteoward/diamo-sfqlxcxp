@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "About Diamonds and Bases";
+const pageDescription = "Discover the story behind Diamonds and Bases, your go-to source for heartfelt baseball stories and insightful analysis. We celebrate the game's passion in a modern, approachable way.";
+const missionPoints = [
+  {
+    title: "Share Captivating Narratives",
+    description: "From the dugout to the stands, we highlight unsung heroes and legendary plays that define our sport."
+  },
+  {
+    title: "Approachable Analysis",
+    description: "We break down strategies, stats, and trends without the jargon, making baseball accessible to all."
+  },
+  {
+    title: "Foster Community",
+    description: "A place where fans connect over their love for the game, sharing stories and experiences."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="relative overflow-hidden">
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-r from-primary to-accent py-24 md:py-32">
+      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            About <span class="text-yellow-300">Diamonds</span> and <span class="text-yellow-300">Bases</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-white/90 mb-8 font-light">
+            Exploring the Heart of Baseball Through Stories and Analysis
+          </p>
+          <div class="flex justify-center">
+            <div class="w-24 h-1 bg-yellow-300 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex items-center mb-10">
+            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mr-4">
+              <i class="fas fa-baseball-ball text-white text-2xl"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-800">Welcome to Diamonds and Bases</h2>
+          </div>
+          
+          <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <p class="mb-6">
+              At <strong>Diamonds and Bases</strong>, we're all about <em>exploring the heart of baseball through stories and analysis</em>. Whether you're a die-hard fan reminiscing about iconic moments or a newcomer curious about the game's magic, our site is your diamond in the rough.
+            </p>
+            <p>
+              Baseball is more than just a sport—it's a canvas of human experiences, where triumphs and heartbreaks are etched into memories that last a lifetime. We celebrate this rich tapestry through compelling narratives that bring the game to life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Mission</h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {missionPoints.map((point, index) => (
+            <div 
+              class="bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+              key={index}
+            >
+              <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-6">
+                <i class="fas fa-heart text-white text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">{point.title}</h3>
+              <p class="text-gray-600">{point.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Baseball Section -->
+    <div class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+            <div class="relative">
+              <div class="w-full h-80 bg-gradient-to-br from-primary to-accent rounded-2xl shadow-xl"></div>
+              <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-300 rounded-2xl shadow-lg"></div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              Why Baseball?
+            </h2>
+            <div class="prose prose-lg max-w-none text-gray-700">
+              <p class="mb-6">
+                From the crack of the bat to the roar of the crowd, baseball offers a unique window into the human experience. It's a game that rewards patience, strategy, and heart. We believe that behind every swing, every pitch, and every stolen base is a story worth telling.
+              </p>
+              <p>
+                Our mission extends beyond statistics and scores. We're here to celebrate the moments that define a player's career, the games that change history, and the communities that keep the spirit of baseball alive. 
+              </p>
+            </div>
+            <div class="mt-8 flex space-x-4">
+              <button class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                Read Our Stories
+              </button>
+              <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                Join Our Community
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founders Section -->
+    <div class="py-20 bg-gradient-to-r from-primary to-accent">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Founders</h2>
+          <div class="w-24 h-1 bg-yellow-300 mx-auto"></div>
+          <p class="text-white/80 mt-6 max-w-2xl mx-auto">
+            Passionate baseball enthusiasts who believe in the power of storytelling to connect fans and preserve the game's legacy
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="bg-white rounded-xl shadow-lg p-8 flex items-center">
+            <div class="w-20 h-20 rounded-full bg-gray-200 mr-6 flex-shrink-0"></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Michael Rodriguez</h3>
+              <p class="text-primary">Chief Storyteller</p>
+              <p class="text-gray-600 mt-2">Former sportswriter with 15 years of experience covering major league baseball.</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-xl shadow-lg p-8 flex items-center">
+            <div class="w-20 h-20 rounded-full bg-gray-200 mr-6 flex-shrink-0"></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Sarah Chen</h3>
+              <p class="text-primary">Analytical Director</p>
+              <p class="text-gray-600 mt-2">Data scientist turned baseball analyst, passionate about making statistics accessible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            Ready to Discover Baseball's Heart?
+          </h2>
+          <p class="text-gray-600 mb-10 text-lg">
+            Join our community of passionate fans who appreciate the stories that make baseball unforgettable.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+              Subscribe to Stories
+            </button>
+            <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+              Explore Our Content
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .gradient-border {
+    position: relative;
+    border-radius: 12px;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #dc2626, #05432f, #dc2626);
+    border-radius: 14px;
+    z-index: -1;
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+</style>
